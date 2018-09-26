@@ -1,0 +1,42 @@
+# Configuration
+#
+# Replace the following placeholders with the correct values for
+# your installation.
+#
+# search_url: The URL for performing the search
+# loaded_link: link prefix for resolved records
+# no_results_link: link to the native search ui
+# query_params: see https://archive.org/advancedsearch.php
+#   you can limit to collections using q params.
+#   e.g. q: [ 'collection:(university_maryland_cp)' ] )
+#   if you modify q, you will probably also want to modify the no_results_link
+#   to include your default q values 
+#   e.g. https://archive.org/search.php?query=collection:(university_maryland_cp)
+#   or if it's a single collection, just use the collection's detail page:
+#   e.g. https://archive.org/details/university_maryland_cp
+defaults: &defaults
+  search_url: 'https://archive.org/advancedsearch.php'
+  loaded_link: 'https://archive.org/search.php'
+  no_results_link: 'https://archive.org'
+  # Query params should be listed in "hash" format
+  query_params:
+    q: []
+    fl: 
+      - title
+      - description
+      - identifier
+    rows: 3
+    output: json
+    sort: []
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults

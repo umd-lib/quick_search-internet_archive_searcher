@@ -1,0 +1,16 @@
+# Localization
+#
+# Replace the following placeholders with the correct values for
+# your installation.
+#
+# <NO_RESULTS_LINK>: The link for your site when there are no results
+
+en:
+  internet_archive_search:
+    display_name: "Internet Archive"
+    short_display_name: "Internet Archive"
+    search_form_placeholder: "Internet Archive"
+    module_callout: "Internet Archive"
+    error_service_message: "searching Internet Archive"
+    no_results_service_message: "a different search from Internet Archive"
+    no_results_link: "<NO_RESULTS_LINK>"
