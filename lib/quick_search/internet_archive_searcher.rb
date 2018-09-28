@@ -1,0 +1,4 @@
+require "quick_search/internet_archive_searcher/engine"
+
+module QuickSearchInternetArchiveSearcher
+end
