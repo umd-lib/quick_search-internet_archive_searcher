@@ -4,7 +4,7 @@ require 'uri'
 require 'json'
 
 module QuickSearch
-  # QuickSearch seacher for DrUM
+  # QuickSearch seacher for Internet Archive
   class InternetArchiveSearcher < QuickSearch::Searcher
     def search
       @response = @http.get(uri, follow_redirect: true)

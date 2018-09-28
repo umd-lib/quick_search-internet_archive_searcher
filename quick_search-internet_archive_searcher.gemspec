@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.authors     = ['UMD Libraries']
   s.email       = ['lib-ssdr@umd.edu']
   s.homepage    = 'http://umd.edu'
-  s.summary     = 'QuickSearchInternetArchiveSearcher.'
-  s.description = 'QuickSearchInternetArchiveSearcher.'
+  s.summary     = 'Internet Archive searcher for NCSU Quick Search.'
+  s.description = 'Internet Archive searcher for NCSU Quick Search.'
   s.license     = 'Apache 2.0'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'LICENSE', 'Rakefile', 'README.md']
