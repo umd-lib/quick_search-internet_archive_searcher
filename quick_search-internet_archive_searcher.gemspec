@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
 require 'quick_search/internet_archive_searcher/version'
@@ -20,4 +20,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'quick_search-core', '~> 0'
   s.add_development_dependency 'rubocop', '= 0.52.1'
+  # sqlite3 loaded for testing with the "dummy" application
+  s.add_development_dependency 'sqlite3'
 end
