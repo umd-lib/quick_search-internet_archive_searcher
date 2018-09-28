@@ -69,7 +69,10 @@ module QuickSearch
 
       # Returns the string to use for the result description
       def get_description(entry)
-        entry.dig('description')
+        description = entry.dig('description')
+        # Description may be a simple string or an array, convert to
+        # array and then use join to merge back into a single string.
+        [description].join(' ')
       end
   end
 end
