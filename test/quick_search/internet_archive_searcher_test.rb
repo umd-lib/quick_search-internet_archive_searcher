@@ -33,5 +33,23 @@ module QuickSearch
 
       assert_equal 'String 1 String 2', result
     end
+
+    test 'get_description should be able to handle markup' do
+      entry = { 'description' => 'some <b>markup!</b>' }
+      result = @searcher.send(:get_description, entry)
+      assert_equal 'some markup!', result
+    end
+
+    test 'get_title should be able to handle markup' do
+      entry = { 'title' => 'more <i>markup!</i>' }
+      result = @searcher.send(:get_title, entry)
+      assert_equal 'more markup!', result
+    end
+
+    test 'get_title should be able to multiple titles' do
+      entry = { 'title' => %w[moby dick] }
+      result = @searcher.send(:get_title, entry)
+      assert_equal 'moby dick', result
+    end
   end
 end
