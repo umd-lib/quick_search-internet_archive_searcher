@@ -8,5 +8,5 @@ config_file = [
 ].find { |file| File.exists? file }
 
 QuickSearch::Engine::INTERNET_ARCHIVE_CONFIG =
-  YAML.load(ERB.new(IO.read(config_file)).result, aliases: true)[Rails.env]
+  YAML.load(ERB.new(IO.read(config_file)).result)[Rails.env]
 QuickSearch::Engine::INTERNET_ARCHIVE_CONFIG.freeze
