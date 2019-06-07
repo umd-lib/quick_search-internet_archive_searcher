@@ -53,7 +53,7 @@ module QuickSearch
         base = URI.parse host
         params = base_query_params
         params['q'] = (params['q'] +
-                         ["(#{http_request_queries['uri_escaped']})" || ''])
+                         ["(#{@q})" || ''])
                       .join(' AND ')
         base.query = params.to_query
         base
