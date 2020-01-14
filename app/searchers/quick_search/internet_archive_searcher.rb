@@ -16,6 +16,7 @@ module QuickSearch
 
     def results
       return @results_list if @results_list
+
       @results_list = @results.dig('response', 'docs').map do |entry|
         OpenStruct.new(
           link: get_hyperlink(entry),
